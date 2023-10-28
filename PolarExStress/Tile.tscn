@@ -4,13 +4,10 @@
 [ext_resource path="res://Tile.gd" type="Script" id=2]
 [ext_resource path="res://shake.tres" type="Animation" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29.5, 29 )
-
 [sub_resource type="Animation" id=2]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Tile:position")
+tracks/0/path = NodePath("tile:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -19,31 +16,34 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 32, 29 ) ]
+"values": [ Vector2( 42, 41 ) ]
 }
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 77.875, 56.25 )
 
 [node name="Tile" type="KinematicBody2D"]
 motion/sync_to_physics = true
 script = ExtResource( 2 )
-
-[node name="ResetTimer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
-[node name="Tile" type="Sprite" parent="."]
-position = Vector2( 32, 29 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 32, 29 )
-shape = SubResource( 1 )
-one_way_collision = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
 anims/RESET = SubResource( 2 )
 anims/shake = ExtResource( 3 )
 
-[connection signal="timeout" from="ResetTimer" to="." method="_on_ResetTimer_timeout"]
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 42, 41.25 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="tile" type="Sprite" parent="."]
+position = Vector2( 42, 41 )
+scale = Vector2( 2.53125, 1.96875 )
+texture = ExtResource( 1 )
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="ResetTimer" to="." method="_on_ResetTimer_timeout"]
