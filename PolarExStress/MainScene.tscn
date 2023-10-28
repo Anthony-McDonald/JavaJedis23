@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tile.tscn" type="PackedScene" id=2]
@@ -7,15 +7,16 @@
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Food.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://BoundaryBox.tscn" type="PackedScene" id=8]
 
 [node name="MainScene" type="Node2D"]
 position = Vector2( 1654, 266 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -3289.0
-margin_top = -952.0
-margin_right = 1475.0
-margin_bottom = 1047.0
+margin_left = -2927.0
+margin_top = -1228.0
+margin_right = 2428.0
+margin_bottom = 771.0
 texture = ExtResource( 4 )
 stretch_mode = 1
 
@@ -116,6 +117,39 @@ position = Vector2( 994, 133 )
 [node name="Tile33" parent="." instance=ExtResource( 2 )]
 position = Vector2( 801, 133 )
 
+[node name="Tile44" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1161, -1 )
+
+[node name="Tile45" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1221, -1 )
+
+[node name="Tile46" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1349, -1 )
+
+[node name="Tile47" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1415, -1 )
+
+[node name="Tile48" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1477, -1 )
+
+[node name="Tile49" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1284, -1 )
+
+[node name="Tile50" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1540, -1 )
+
+[node name="Tile51" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1668, -1 )
+
+[node name="Tile52" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1734, -1 )
+
+[node name="Tile53" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1796, -1 )
+
+[node name="Tile54" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1603, -1 )
+
 [node name="Tile34" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1491, 237 )
 
@@ -164,7 +198,130 @@ position = Vector2( -707, -8 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 7 )]
-margin_left = 23.0
-margin_top = 7.0
-margin_right = 23.0
-margin_bottom = 7.0
+margin_left = 18.0
+margin_top = 29.0
+margin_right = 25.0
+margin_bottom = 92.0
+
+[node name="BoundaryBox" parent="." instance=ExtResource( 8 )]
+position = Vector2( -2886, 479 )
+
+[node name="BoundaryBox2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -2767, 479 )
+
+[node name="BoundaryBox3" parent="." instance=ExtResource( 8 )]
+position = Vector2( -2648, 479 )
+
+[node name="BoundaryBox4" parent="." instance=ExtResource( 8 )]
+position = Vector2( -2529, 479 )
+
+[node name="BoundaryBox5" parent="." instance=ExtResource( 8 )]
+position = Vector2( -2410, 480 )
+
+[node name="BoundaryBox6" parent="." instance=ExtResource( 8 )]
+position = Vector2( -2291, 479 )
+
+[node name="BoundaryBox7" parent="." instance=ExtResource( 8 )]
+position = Vector2( -2172, 479 )
+
+[node name="BoundaryBox8" parent="." instance=ExtResource( 8 )]
+position = Vector2( -2053, 479 )
+
+[node name="BoundaryBox9" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1934, 480 )
+
+[node name="BoundaryBox10" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1815, 479 )
+
+[node name="BoundaryBox11" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1696, 479 )
+
+[node name="BoundaryBox12" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1577, 479 )
+
+[node name="BoundaryBox13" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1458, 480 )
+
+[node name="BoundaryBox14" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1339, 479 )
+
+[node name="BoundaryBox15" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1220, 479 )
+
+[node name="BoundaryBox16" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1101, 479 )
+
+[node name="BoundaryBox17" parent="." instance=ExtResource( 8 )]
+position = Vector2( -982, 480 )
+
+[node name="BoundaryBox18" parent="." instance=ExtResource( 8 )]
+position = Vector2( -863, 481 )
+
+[node name="BoundaryBox19" parent="." instance=ExtResource( 8 )]
+position = Vector2( -744, 481 )
+
+[node name="BoundaryBox20" parent="." instance=ExtResource( 8 )]
+position = Vector2( -625, 481 )
+
+[node name="BoundaryBox21" parent="." instance=ExtResource( 8 )]
+position = Vector2( -506, 482 )
+
+[node name="BoundaryBox22" parent="." instance=ExtResource( 8 )]
+position = Vector2( -387, 481 )
+
+[node name="BoundaryBox23" parent="." instance=ExtResource( 8 )]
+position = Vector2( -268, 481 )
+
+[node name="BoundaryBox24" parent="." instance=ExtResource( 8 )]
+position = Vector2( -149, 481 )
+
+[node name="BoundaryBox25" parent="." instance=ExtResource( 8 )]
+position = Vector2( -30, 482 )
+
+[node name="BoundaryBox26" parent="." instance=ExtResource( 8 )]
+position = Vector2( 89, 479 )
+
+[node name="BoundaryBox27" parent="." instance=ExtResource( 8 )]
+position = Vector2( 208, 479 )
+
+[node name="BoundaryBox28" parent="." instance=ExtResource( 8 )]
+position = Vector2( 327, 479 )
+
+[node name="BoundaryBox29" parent="." instance=ExtResource( 8 )]
+position = Vector2( 446, 480 )
+
+[node name="BoundaryBox30" parent="." instance=ExtResource( 8 )]
+position = Vector2( 565, 479 )
+
+[node name="BoundaryBox31" parent="." instance=ExtResource( 8 )]
+position = Vector2( 684, 479 )
+
+[node name="BoundaryBox32" parent="." instance=ExtResource( 8 )]
+position = Vector2( 803, 479 )
+
+[node name="BoundaryBox33" parent="." instance=ExtResource( 8 )]
+position = Vector2( 922, 480 )
+
+[node name="BoundaryBox34" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1041, 479 )
+
+[node name="BoundaryBox35" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1160, 479 )
+
+[node name="BoundaryBox36" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1279, 479 )
+
+[node name="BoundaryBox37" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1398, 480 )
+
+[node name="BoundaryBox38" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1517, 479 )
+
+[node name="BoundaryBox39" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1636, 479 )
+
+[node name="BoundaryBox40" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1755, 479 )
+
+[node name="BoundaryBox41" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1874, 480 )
