@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
-source_file="res://tile.png"
-dest_files=[ "res://.import/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.stex" ]
-
+source_file="res://Assets/GodotProject/__MACOSX/GodotProject/World/Background/._middle.png"
 [params]
 
 compress/mode=0
