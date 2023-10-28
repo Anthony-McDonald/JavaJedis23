@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_BoundaryBox_body_entered(body):
-		get_tree().change_scene("res://Level4.tscn")
+	get_tree().change_scene("res://LastLevel.tscn")

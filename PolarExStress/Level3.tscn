@@ -5,7 +5,7 @@
 [ext_resource path="res://Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://back.png" type="Texture" id=4]
 [ext_resource path="res://smooth_tile.tscn" type="PackedScene" id=5]
-[ext_resource path="res://level3-4Igloo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://LastIgloo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://BoundaryBox.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Food.tscn" type="PackedScene" id=9]
@@ -45,10 +45,10 @@ margin_right = 3989.0
 margin_bottom = 1091.0
 
 [node name="l3textlvl3" parent="TextureRect" instance=ExtResource( 13 )]
-margin_left = 5643.0
-margin_top = 1022.0
-margin_right = 5643.0
-margin_bottom = 1022.0
+margin_left = 5513.0
+margin_top = 1176.0
+margin_right = 5513.0
+margin_bottom = 1176.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1638, 182 )
@@ -415,6 +415,6 @@ position = Vector2( -918, 6 )
 [node name="Enemy" parent="." instance=ExtResource( 10 )]
 position = Vector2( 439, 218 )
 
-[node name="BoundaryBox4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3227, -117 )
+[node name="BoundaryBox3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1982, 128 )
 scale = Vector2( 0.5, 0.5 )

@@ -97,6 +97,8 @@ func change_health(value) :
 	ui.set_satiation_text(health)
 	if health>100:
 		health = 100
+	if health <= 0:
+		die()
 	
 func get_health() :
 	return health

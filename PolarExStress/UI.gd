@@ -24,7 +24,7 @@ func set_satiation_text(satiation) :
 	elif satiation == 20:
 		$AnimatedSprite.animation = "20health"
 	if satiation <= 0:
-		get_tree().reload_current_scene()
+		$AnimatedSprite.animation = "0health"
 	
 	#satiationText.text = str(satiation, "%")
 
