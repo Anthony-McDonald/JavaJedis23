@@ -1,4 +1,4 @@
-extends Camera2D
+extends Sprite
 
 
 # Declare member variables here. Examples:
@@ -11,14 +11,10 @@ func _ready():
 	pass # Replace with function body.
 
 
-
-onready var player = get_node("/root/MainScene/Player")
-
-
-func _process(_delta):
-	
-	position.x = player.position.x
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_BoundaryBox_body_entered(body):
+	get_tree().change_scene("res://Level2.tscn")
