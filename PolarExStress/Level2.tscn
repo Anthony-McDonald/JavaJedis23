@@ -1,37 +1,45 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://back.png" type="Texture" id=4]
+[ext_resource path="res://smooth_tile.tscn" type="PackedScene" id=5]
+[ext_resource path="res://NextLevelTemplate.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://BoundaryBox.tscn" type="PackedScene" id=8]
-[ext_resource path="res://LevelTransitionPoint.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Food.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=10]
 
 [node name="MainScene" type="Node2D"]
 position = Vector2( 1654, 266 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -2958.0
-margin_top = -954.0
-margin_right = 2397.0
-margin_bottom = 1045.0
+margin_left = -3526.0
+margin_top = -1357.0
+margin_right = 2809.0
+margin_bottom = 642.0
 texture = ExtResource( 4 )
 stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1265, 165 )
+position = Vector2( -2683, -99 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -1662, 6 )
+drag_margin_left = 0.0
+drag_margin_top = 0.0
+drag_margin_right = 0.0
+drag_margin_bottom = 0.0
+script = ExtResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 7 )]
-margin_left = 44.0
-margin_top = 24.0
-margin_right = 51.0
-margin_bottom = 87.0
-
-[node name="BoundaryBox3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 923, -57 )
+margin_left = 28.0
+margin_top = 13.0
+margin_right = 35.0
+margin_bottom = 76.0
 
 [node name="BoundaryBoxes" type="Node" parent="."]
 
@@ -158,262 +166,96 @@ position = Vector2( 3410, 1204 )
 [node name="BoundaryBox41" parent="BoundaryBoxes" instance=ExtResource( 8 )]
 position = Vector2( 3529, 1205 )
 
-[node name="BoundaryBox42" parent="BoundaryBoxes" instance=ExtResource( 9 )]
-position = Vector2( 2577, 425 )
+[node name="Enemy" parent="." instance=ExtResource( 10 )]
+position = Vector2( -612, 50 )
 
-[node name="BoundaryBox43" parent="BoundaryBoxes" instance=ExtResource( 9 )]
-position = Vector2( 2577, 317 )
-
-[node name="BoundaryBox44" parent="BoundaryBoxes" instance=ExtResource( 9 )]
-position = Vector2( 2577, 101 )
-
-[node name="BoundaryBox45" parent="BoundaryBoxes" instance=ExtResource( 9 )]
-position = Vector2( 2577, 10 )
-
-[node name="BoundaryBox46" parent="BoundaryBoxes" instance=ExtResource( 9 )]
-position = Vector2( 2577, -98 )
+[node name="Food3" parent="." instance=ExtResource( 9 )]
+position = Vector2( -50, -80 )
 
 [node name="Tiles" type="Node" parent="."]
 
-[node name="Tile13" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -392, 443 )
+[node name="Tile2" parent="Tiles" instance=ExtResource( 2 )]
+position = Vector2( 1224, 488 )
 
-[node name="Tile24" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -332, 443 )
-
-[node name="Tile25" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -204, 443 )
-
-[node name="Tile26" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -138, 443 )
-
-[node name="Tile27" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -76, 443 )
-
-[node name="Tile28" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -269, 443 )
-
-[node name="Tile29" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -13, 443 )
-
-[node name="Tile30" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 115, 443 )
-
-[node name="Tile31" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 181, 443 )
-
-[node name="Tile32" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 243, 443 )
-
-[node name="Tile33" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 50, 443 )
-
-[node name="Tile46" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1397, 503 )
-
-[node name="Tile47" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1463, 503 )
-
-[node name="Tile48" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1525, 503 )
-
-[node name="Tile49" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1332, 503 )
-
-[node name="Tile50" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1588, 503 )
-
-[node name="Tile51" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1716, 503 )
-
-[node name="Tile52" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1782, 503 )
-
-[node name="Tile53" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1844, 503 )
-
-[node name="Tile54" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1651, 503 )
-
-[node name="Tile66" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 552, 560 )
-
-[node name="Tile75" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 603, 560 )
-
-[node name="Tile77" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 663, 560 )
-
-[node name="Tile78" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 791, 560 )
-
-[node name="Tile79" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 857, 560 )
-
-[node name="Tile80" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 919, 560 )
-
-[node name="Tile81" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 726, 560 )
-
-[node name="Tile82" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 982, 560 )
-
-[node name="Tile83" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1110, 560 )
-
-[node name="Tile84" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1176, 560 )
-
-[node name="Tile85" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1238, 560 )
-
-[node name="Tile86" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1045, 560 )
-
-[node name="Tile87" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1876, 503 )
-
-[node name="Tile88" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1927, 503 )
-
-[node name="Tile89" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1987, 503 )
-
-[node name="Tile90" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2115, 503 )
-
-[node name="Tile91" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2181, 503 )
-
-[node name="Tile92" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2243, 503 )
-
-[node name="Tile93" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2050, 503 )
-
-[node name="Tile94" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2306, 503 )
-
-[node name="Tile95" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2434, 503 )
-
-[node name="Tile96" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2500, 503 )
-
-[node name="Tile97" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2562, 503 )
-
-[node name="Tile98" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2369, 503 )
-
-[node name="Tile101" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1699, 443 )
-
-[node name="Tile102" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1827, 443 )
-
-[node name="Tile103" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1893, 443 )
-
-[node name="Tile104" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1955, 443 )
-
-[node name="Tile105" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1762, 443 )
-
-[node name="Tile106" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2018, 443 )
-
-[node name="Tile107" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2146, 443 )
-
-[node name="Tile108" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2212, 443 )
-
-[node name="Tile110" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2081, 443 )
-
-[node name="Tile109" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1827, 371 )
-
-[node name="Tile111" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1955, 371 )
-
-[node name="Tile112" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2021, 371 )
-
-[node name="Tile113" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2083, 371 )
-
-[node name="Tile114" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1890, 371 )
-
-[node name="Tile115" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2146, 371 )
-
-[node name="Tile116" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 1959, 304 )
-
-[node name="Tile117" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2280, 435 )
-
-[node name="Tile118" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 2209, 371 )
+[node name="Tile3" parent="Tiles" instance=ExtResource( 2 )]
+position = Vector2( 1384, 488 )
 
 [node name="Tile4" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -392, 503 )
+position = Vector2( 2020, 463 )
 
 [node name="Tile5" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -264, 503 )
-
-[node name="Tile10" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -198, 503 )
-
-[node name="Tile11" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -136, 503 )
+position = Vector2( 696, 175 )
 
 [node name="Tile6" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -329, 503 )
+position = Vector2( 856, 175 )
 
 [node name="Tile7" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -73, 503 )
+position = Vector2( 1023, 331 )
 
-[node name="Tile8" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 55, 503 )
+[node name="Tile" parent="Tiles" instance=ExtResource( 2 )]
+position = Vector2( 381, 174 )
+scale = Vector2( 1, 1.05 )
 
-[node name="Tile9" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -10, 503 )
+[node name="smooth_tile" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( -499, 184 )
+scale = Vector2( 2.5, 2 )
 
-[node name="Tile22" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( -457, 503 )
+[node name="smooth_tile2" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( -333, 365 )
+scale = Vector2( 2.5, 2 )
 
-[node name="Tile12" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 121, 503 )
+[node name="smooth_tile3" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( -173, 365 )
+scale = Vector2( 2.5, 2 )
 
-[node name="Tile34" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 163, 503 )
+[node name="smooth_tile4" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( -13, 365 )
+scale = Vector2( 2.5, 2 )
 
-[node name="Tile35" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 291, 503 )
+[node name="smooth_tile5" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( -1139, 184 )
+scale = Vector2( 2.5, 2 )
 
-[node name="Tile36" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 357, 503 )
+[node name="smooth_tile6" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( -979, 184 )
+scale = Vector2( 2.5, 2 )
 
-[node name="Tile37" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 419, 503 )
+[node name="smooth_tile7" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( -819, 184 )
+scale = Vector2( 2.5, 2 )
 
-[node name="Tile38" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 226, 503 )
+[node name="smooth_tile8" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( -659, 184 )
+scale = Vector2( 2.5, 2 )
 
-[node name="Tile39" parent="Tiles" instance=ExtResource( 2 )]
-position = Vector2( 482, 503 )
+[node name="smooth_tile22" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( 2172, 479 )
+scale = Vector2( 2.5, 2 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( -1675, 33 )
-current = true
-drag_margin_left = 0.0
-drag_margin_top = 0.0
-drag_margin_right = 0.0
-drag_margin_bottom = 0.0
-script = ExtResource( 3 )
+[node name="smooth_tile23" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( 1486, 233 )
+scale = Vector2( 2.5, 2 )
+
+[node name="smooth_tile24" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( 1646, 233 )
+scale = Vector2( 2.5, 2 )
+
+[node name="smooth_tile25" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( 1806, 233 )
+scale = Vector2( 2.5, 2 )
+
+[node name="smooth_tile9" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( 533, 190 )
+scale = Vector2( 2.5, 2 )
+
+[node name="smooth_tile15" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( -13, 365 )
+scale = Vector2( 2.5, 2 )
+
+[node name="smooth_tile16" parent="Tiles" instance=ExtResource( 5 )]
+position = Vector2( 533, 190 )
+scale = Vector2( 2.5, 2 )
+
+[node name="BoundaryBox" parent="." instance=ExtResource( 6 )]
+position = Vector2( 517, 120 )
+scale = Vector2( 0.5, 0.5 )
