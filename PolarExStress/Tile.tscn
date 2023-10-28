@@ -20,7 +20,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 77.875, 56.25 )
+extents = Vector2( 77.875, 50.75 )
 
 [node name="Tile" type="KinematicBody2D"]
 motion/sync_to_physics = true
@@ -36,7 +36,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 42, 41.25 )
+position = Vector2( 42, 46.75 )
 shape = SubResource( 1 )
 one_way_collision = true
 

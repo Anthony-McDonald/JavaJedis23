@@ -1,22 +1,21 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://BoundaryBox.tscn" type="PackedScene" id=1]
-[ext_resource path="res://door.png" type="Texture" id=2]
-[ext_resource path="res://DoorToLevel2.gd" type="Script" id=3]
+[ext_resource path="res://Igloo.gd" type="Script" id=1]
+[ext_resource path="res://igloo.png" type="Texture" id=2]
 
-[node name="BoundaryBox" instance=ExtResource( 1 )]
-position = Vector2( -17, -2 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 39.75, 26.75 )
 
-[node name="CollisionShape2D" parent="." index="0"]
-position = Vector2( 52, 53 )
+[node name="IglooTransition" type="Area2D"]
 
-[node name="Block-big" parent="." index="1"]
-visible = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 20.75, -6.25 )
+shape = SubResource( 1 )
 
-[node name="Door" type="Sprite" parent="." index="2"]
-position = Vector2( 49.5, 53.375 )
-scale = Vector2( 2.86364, 3.17424 )
+[node name="Igloo" type="Sprite" parent="."]
+position = Vector2( 31, 0 )
+scale = Vector2( 0.07, 0.07 )
 texture = ExtResource( 2 )
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 
-[connection signal="body_entered" from="." to="Door" method="_on_BoundaryBox_body_entered"]
+[connection signal="body_entered" from="." to="Igloo" method="_on_IglooTransition_body_entered"]
