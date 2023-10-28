@@ -1,0 +1,111 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Exo2-Black.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://StartMenu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+font_data = ExtResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=7]
+render_priority = -1
+emission_shape = 2
+emission_box_extents = Vector3( 150, 100, 1 )
+flag_disable_z = true
+gravity = Vector3( -15, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+linear_accel = 12.0
+scale = 5.0
+color = Color( 0.92549, 0.905882, 0.905882, 1 )
+anim_speed = 12.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.709804, 0.541176, 0.541176, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 36
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.792157, 0.643137, 0.643137, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.752941, 0.560784, 0.560784, 1 )
+
+[node name="StartMenu" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1032.0
+margin_bottom = 594.0
+color = Color( 0.588235, 0.713726, 0.984314, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_top = 96.0
+margin_right = 1032.0
+margin_bottom = 456.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 1032.0
+margin_bottom = 360.0
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_right = 1032.0
+margin_bottom = 2.0
+custom_fonts/font = SubResource( 1 )
+text = "Polar Bear Is Dying"
+align = 1
+autowrap = true
+uppercase = true
+
+[node name="Particles2D" type="Particles2D" parent="MarginContainer"]
+position = Vector2( 531, 250 )
+rotation = 0.000759751
+scale = Vector2( 3.12003, 2.75159 )
+amount = 50
+process_material = SubResource( 7 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+margin_left = 360.0
+margin_top = 256.0
+margin_right = 664.0
+margin_bottom = 418.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+margin_right = 304.0
+margin_bottom = 162.0
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+margin_top = 65.0
+margin_right = 304.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+text = "Start"
+clip_text = true
+
+[node name="TutorialButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+margin_top = 77.0
+margin_right = 304.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 5 )
+text = "Tutorial"
+
+[node name="QuitButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+margin_top = 89.0
+margin_right = 304.0
+margin_bottom = 97.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 6 )
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/TutorialButton" to="." method="_on_TutorialButton_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
