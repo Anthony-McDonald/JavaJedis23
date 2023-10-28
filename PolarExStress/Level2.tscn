@@ -5,7 +5,7 @@
 [ext_resource path="res://Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://back.png" type="Texture" id=4]
 [ext_resource path="res://smooth_tile.tscn" type="PackedScene" id=5]
-[ext_resource path="res://NextLevelTemplate.tscn" type="PackedScene" id=6]
+[ext_resource path="res://level2-3Igloo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://BoundaryBox.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Food.tscn" type="PackedScene" id=9]
@@ -257,6 +257,5 @@ scale = Vector2( 2.5, 2 )
 position = Vector2( 533, 190 )
 scale = Vector2( 2.5, 2 )
 
-[node name="BoundaryBox" parent="." instance=ExtResource( 6 )]
-position = Vector2( 517, 120 )
-scale = Vector2( 0.5, 0.5 )
+[node name="BoundaryBox3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 519, 152 )
