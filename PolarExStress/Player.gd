@@ -25,9 +25,12 @@ func _physics_process(delta):
 	#reset horizontal velocity
 	vel.x = 0
 	
+	var animation_changed = false
+	
 	#movement inputs
 	if Input.is_action_pressed("move_left"):
 		vel.x -= speed * 2
+		animation_changed = true
 		
 	if Input.is_action_pressed("move_right"):
 		vel.x += speed * 2
@@ -37,7 +40,14 @@ func _physics_process(delta):
 		if collision.collider.has_method("collide_with"):
 			collision.collider.collide_with(collision, self)
 			
+		animation_changed = true
 	
+	#animation changes
+	if animation_changed:
+		sprite.play("Run")
+	else:
+		sprite.play("Idle")
+		
 	#applying the velocity
 	vel = move_and_slide(vel, Vector2.UP)
 	
@@ -47,6 +57,7 @@ func _physics_process(delta):
 	#jump input
 	if Input.is_action_pressed("jump") and is_on_floor():
 		vel.y -= jumpForce
+		$AnimatedSprite.animation = "Jump"
 	
 	#flip spirte depending on player direction
 	if vel.x < 0:
@@ -66,13 +77,14 @@ func _physics_process(delta):
 	
 
 #components
-onready var sprite = $Sprite
+onready var sprite = $AnimatedSprite
 
 #viewwindow
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	sprite.play("Idle")
 	pass # Replace with function body.
 	
 	
