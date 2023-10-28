@@ -1,29 +1,62 @@
-extends RigidBody2D
+extends KinematicBody2D
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var gravity : int = 800
+
+onready var timer = $ResetTimer
+onready var animation_player = $AnimationPlayer
+
+export var reset_time : float = 1.0
+
+onready var reset_position = global_position
+
+
+
+var velocity = Vector2()
+var is_triggered = false
+
+
+func _physics_process(delta):
+	velocity.y += gravity * delta
+	position += velocity * delta
+	
+func collide_with(collision : KinematicCollision2D, collider : KinematicBody2D):
+	if !is_triggered:
+		is_triggered = true
+		animation_player.play("shake")
+		velocity = Vector2.ZERO
+		
+		
+	
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	set_physics_process(true)
+	timer.start(reset_time)
+
 
 
 # Called when the node enters the scene tree for the first time.
+
+func _on_ResetTimer_timeout():
+	set_physics_process(false)
+	yield(get_tree(), "physics_frame")
+	var temp = collision_layer
+	collision_layer = 0
+	# global_position = reset_position
+	yield(get_tree(), "physics_frame")
+	collision_layer = temp
+	is_triggered = false
+	
 func _ready():
-	mode = RigidBody2D.MODE_STATIC
-	
-	
-func _on_Tile_body_entered(body):
-	if body.name == "Player":
-		mode = RigidBody2D.MODE_RIGID
-
-
-		
-	
-
-		
-
-	
+	set_physics_process(false)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+	
+	
+	
+

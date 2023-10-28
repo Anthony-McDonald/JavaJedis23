@@ -31,6 +31,12 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed("move_right"):
 		vel.x += speed * 2
+		
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.has_method("collide_with"):
+			collision.collider.collide_with(collision, self)
+			
 	
 	#applying the velocity
 	vel = move_and_slide(vel, Vector2.UP)
@@ -83,3 +89,5 @@ func add_food(value) :
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
