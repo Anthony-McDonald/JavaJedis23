@@ -21,6 +21,6 @@ margin_right = 1027.0
 margin_bottom = 366.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "It’s not just me! One-third of plant and animal 
-species are threatened
- by extinction due to climate change."
+text = "An additional 250,000 
+human deaths are forecasted per year between 2030 
+and 2050 due to climate change."

@@ -21,6 +21,6 @@ margin_right = 1682.0
 margin_bottom = 364.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "It’s not just me! One-third of plant and animal
- species are threatened 
-by extinction due to climate change."
+text = "There has been a 40% decrease in my fellow
+ polar bear population 
+from 2001-2010."
