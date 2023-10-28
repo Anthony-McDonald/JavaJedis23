@@ -56,7 +56,7 @@ margin_bottom = 360.0
 
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 1032.0
-margin_bottom = 2.0
+margin_bottom = 87.0
 custom_fonts/font = SubResource( 1 )
 text = "Polar Bear Is Dying"
 align = 1
@@ -75,37 +75,48 @@ margin_left = 360.0
 margin_top = 256.0
 margin_right = 664.0
 margin_bottom = 418.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
 margin_right = 304.0
-margin_bottom = 162.0
+margin_bottom = 212.0
 alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer2/VBoxContainer"]
-margin_top = 65.0
 margin_right = 304.0
-margin_bottom = 73.0
+margin_bottom = 50.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 3 )
 text = "Start"
 clip_text = true
 
 [node name="TutorialButton" type="Button" parent="MarginContainer2/VBoxContainer"]
-margin_top = 77.0
+margin_top = 54.0
 margin_right = 304.0
-margin_bottom = 85.0
+margin_bottom = 104.0
 custom_fonts/font = SubResource( 4 )
 custom_styles/hover = SubResource( 5 )
 text = "Tutorial"
 
-[node name="QuitButton" type="Button" parent="MarginContainer2/VBoxContainer"]
-margin_top = 89.0
+[node name="CreditButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+margin_top = 108.0
 margin_right = 304.0
-margin_bottom = 97.0
+margin_bottom = 158.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 6 )
+text = "Credit"
+
+[node name="QuitButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+margin_top = 162.0
+margin_right = 304.0
+margin_bottom = 212.0
 custom_fonts/font = SubResource( 4 )
 custom_styles/hover = SubResource( 6 )
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/TutorialButton" to="." method="_on_TutorialButton_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/CreditButton" to="." method="_on_CreditButton_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
