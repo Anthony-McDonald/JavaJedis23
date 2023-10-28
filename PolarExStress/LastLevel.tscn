@@ -1,12 +1,15 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://L4Text3.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://back.png" type="Texture" id=4]
 [ext_resource path="res://smooth_tile.tscn" type="PackedScene" id=5]
+[ext_resource path="res://L4Text1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://BoundaryBox.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Food.tscn" type="PackedScene" id=9]
+[ext_resource path="res://L4Text2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://L2Text3.tscn" type="PackedScene" id=11]
 [ext_resource path="res://L2Text1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://L2Text2.tscn" type="PackedScene" id=13]
@@ -44,6 +47,24 @@ margin_bottom = 184.0
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -2715, 126 )
 
+[node name="l3textlvl3" parent="Player" instance=ExtResource( 6 )]
+margin_left = -331.0
+margin_top = -272.0
+margin_right = -331.0
+margin_bottom = -272.0
+
+[node name="l3textlvl4" parent="Player" instance=ExtResource( 10 )]
+margin_left = 69.0
+margin_top = -368.0
+margin_right = 69.0
+margin_bottom = -368.0
+
+[node name="l3textlvl5" parent="Player" instance=ExtResource( 2 )]
+margin_left = 205.0
+margin_top = -200.0
+margin_right = 205.0
+margin_bottom = -200.0
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -1662, 6 )
 current = true
@@ -56,10 +77,9 @@ script = ExtResource( 3 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 7 )]
-margin_left = 28.0
-margin_top = 13.0
-margin_right = 35.0
-margin_bottom = 76.0
+margin_left = 16.0
+margin_right = 23.0
+margin_bottom = 63.0
 
 [node name="BoundaryBoxes" type="Node" parent="."]
 
