@@ -8,8 +8,8 @@ extends KinematicBody2D
 
 #stats
 var counter: int = 0
-var hunger : int = 50
 var health : int = 100
+
 onready var ui = get_node("/root/MainScene/CanvasLayer/UI")
 
 #physics
@@ -67,8 +67,8 @@ func _physics_process(delta):
 		
 	
 	#hunger decrementer
-	if counter == 180:
-		add_food(-10)
+	if counter == 200:
+		change_health(-20)
 		counter = 0
 	else:
 		counter += 1
@@ -92,9 +92,14 @@ func die():
 	get_tree().reload_current_scene()
 	
 
-func add_food(value) :
-	hunger += value
-	ui.set_satiation_text(hunger)
+func change_health(value) :
+	health += value
+	ui.set_satiation_text(health)
+	if health>100:
+		health = 100
+	
+func get_health() :
+	return health
 
 
 

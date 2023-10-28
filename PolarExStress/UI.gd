@@ -1,4 +1,5 @@
-extends Control
+extends Control #and "res://Enemy.gd"
+
 
 
 # Declare member variables here. Examples:
@@ -12,10 +13,20 @@ onready var satiationText = get_node("Satiation")
 
 func set_satiation_text(satiation) :
 	
-	if satiation == -10:
+	if satiation == 100:
+		$AnimatedSprite.animation = "100health"
+	elif satiation == 80:
+		$AnimatedSprite.animation = "80health"
+	elif satiation == 60:
+		$AnimatedSprite.animation = "60health"
+	elif satiation == 40:
+		$AnimatedSprite.animation = "40health"
+	elif satiation == 20:
+		$AnimatedSprite.animation = "20health"
+	if satiation <= 0:
 		get_tree().reload_current_scene()
 	
-	satiationText.text = str(satiation, "%")
+	#satiationText.text = str(satiation, "%")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -12,7 +12,7 @@ func _ready():
 
 func _on_Enemy_body_entered(body):
 	if body.name == "Player":
-		body.add_food(10)
+		body.change_health(20)
 		queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

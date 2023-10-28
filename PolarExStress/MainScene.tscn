@@ -12,10 +12,10 @@
 position = Vector2( 1654, 266 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -2870.0
-margin_top = -1423.0
-margin_right = 2485.0
-margin_bottom = 576.0
+margin_left = -3830.0
+margin_top = -1319.0
+margin_right = 1525.0
+margin_bottom = 680.0
 texture = ExtResource( 4 )
 stretch_mode = 1
 
@@ -34,10 +34,10 @@ script = ExtResource( 3 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 7 )]
-margin_left = 802.0
-margin_top = 53.0
-margin_right = 809.0
-margin_bottom = 116.0
+margin_left = 516.0
+margin_top = 51.0
+margin_right = 523.0
+margin_bottom = 114.0
 
 [node name="BoundaryBox3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 923, -57 )
