@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_BoundaryBox_body_entered(body):
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://Gameover.tscn")

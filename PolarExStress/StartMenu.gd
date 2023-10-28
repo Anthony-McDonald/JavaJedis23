@@ -20,3 +20,7 @@ func _on_BackButton_pressed():
 
 func _on_CreditButton_pressed():
 	get_tree().change_scene("res://Credit.tscn")
+
+
+func _on_MenuButton_pressed():
+	get_tree().change_scene("res://StartMenu.tscn")

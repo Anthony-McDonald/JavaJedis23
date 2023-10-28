@@ -89,7 +89,7 @@ func _ready():
 	
 	
 func die():
-	get_tree().reload_current_scene()
+	get_tree().change_scene("res://Gameover.tscn")
 	
 
 func change_health(value) :
