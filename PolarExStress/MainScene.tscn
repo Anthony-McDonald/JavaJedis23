@@ -12,7 +12,6 @@
 position = Vector2( 1654, 266 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
 margin_left = -2870.0
 margin_top = -1423.0
 margin_right = 2485.0
