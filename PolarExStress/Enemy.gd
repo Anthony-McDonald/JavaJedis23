@@ -52,5 +52,5 @@ func move_to (current,to,step) :
 
 func _on_Enemy_body_entered(body):
 	if body.name == "Player":
-		body.die()
+		body.death()
 		

@@ -88,7 +88,7 @@ func _ready():
 	pass # Replace with function body.
 	
 	
-func die():
+func death():
 	get_tree().change_scene("res://Gameover.tscn")
 	
 
@@ -98,7 +98,7 @@ func change_health(value) :
 	if health>100:
 		health = 100
 	if health <= 0:
-		die()
+		death()
 	
 func get_health() :
 	return health
