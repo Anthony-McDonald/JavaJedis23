@@ -9,6 +9,7 @@ extends KinematicBody2D
 #stats
 var counter: int = 0
 var health : int = 100
+var is_last_level = false
 
 onready var ui = get_node("/root/MainScene/CanvasLayer/UI")
 
@@ -85,11 +86,16 @@ onready var sprite = $AnimatedSprite
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	sprite.play("Idle")
+	if get_tree().current_scene.has_node("LastLevelNotifier"):
+		is_last_level = true
 	pass # Replace with function body.
 	
 	
 func death():
-	get_tree().change_scene("res://Gameover.tscn")
+	if is_last_level == true:
+		get_tree().change_scene("res://Tutorial.tscn")
+	else:
+		get_tree().change_scene("res://Gameover.tscn")
 	
 
 func change_health(value) :

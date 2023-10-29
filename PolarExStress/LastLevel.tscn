@@ -330,3 +330,7 @@ scale = Vector2( 2.5, 2 )
 
 [node name="Food3" parent="." instance=ExtResource( 9 )]
 position = Vector2( -2299, 150 )
+
+[node name="LastLevelNotifier" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
