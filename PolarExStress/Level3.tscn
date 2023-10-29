@@ -45,10 +45,10 @@ margin_right = 3989.0
 margin_bottom = 1091.0
 
 [node name="l3textlvl3" parent="TextureRect" instance=ExtResource( 13 )]
-margin_left = 4964.0
-margin_top = 1140.0
-margin_right = 4964.0
-margin_bottom = 1140.0
+margin_left = 4800.0
+margin_top = 1090.0
+margin_right = 4800.0
+margin_bottom = 1090.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1638, 182 )
