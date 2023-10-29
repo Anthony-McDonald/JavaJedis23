@@ -46,19 +46,20 @@ margin_bottom = 594.0
 color = Color( 0.588235, 0.713726, 0.984314, 1 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-margin_top = 96.0
+margin_top = 71.0
 margin_right = 1032.0
 margin_bottom = 456.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_right = 1032.0
-margin_bottom = 360.0
+margin_bottom = 385.0
 
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 1032.0
-margin_bottom = 87.0
+margin_bottom = 177.0
 custom_fonts/font = SubResource( 1 )
-text = "Polar Bear Is Dying"
+text = "Unbearable:
+a climate crisis"
 align = 1
 autowrap = true
 uppercase = true
@@ -81,7 +82,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
 margin_right = 330.0
-margin_bottom = 212.0
+margin_bottom = 266.0
 alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer2/VBoxContainer"]
@@ -100,23 +101,32 @@ custom_fonts/font = SubResource( 4 )
 custom_styles/hover = SubResource( 5 )
 text = "What Can You Do?"
 
-[node name="CreditButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+[node name="Tutorial2Button" type="Button" parent="MarginContainer2/VBoxContainer"]
 margin_top = 108.0
 margin_right = 330.0
 margin_bottom = 158.0
 custom_fonts/font = SubResource( 4 )
 custom_styles/hover = SubResource( 6 )
-text = "Credits"
+text = "Tutorial"
 
-[node name="QuitButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+[node name="CreditButton" type="Button" parent="MarginContainer2/VBoxContainer"]
 margin_top = 162.0
 margin_right = 330.0
 margin_bottom = 212.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 6 )
+text = "Credits"
+
+[node name="QuitButton2" type="Button" parent="MarginContainer2/VBoxContainer"]
+margin_top = 216.0
+margin_right = 330.0
+margin_bottom = 266.0
 custom_fonts/font = SubResource( 4 )
 custom_styles/hover = SubResource( 6 )
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/TutorialButton" to="." method="_on_TutorialButton_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Tutorial2Button" to="." method="_on_Tutorial2Button_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/CreditButton" to="." method="_on_CreditButton_pressed"]
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/QuitButton2" to="." method="_on_QuitButton_pressed"]
