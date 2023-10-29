@@ -47,10 +47,10 @@ script = ExtResource( 3 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 7 )]
-margin_left = 44.0
-margin_top = -27.0
-margin_right = 51.0
-margin_bottom = 36.0
+margin_left = 10.0
+margin_top = 33.0
+margin_right = 17.0
+margin_bottom = 96.0
 
 [node name="BoundaryBoxes" type="Node" parent="."]
 
